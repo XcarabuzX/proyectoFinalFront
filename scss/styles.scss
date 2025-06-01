@@ -30,25 +30,22 @@ body {
 .fw-semibold { font-weight: $font-weight-semibold; }
 .fw-bold { font-weight: $font-weight-bold; }
 
-// Estilos personalizados
-body {
-    font-family: 'Arial', sans-serif;
-}
+// Estilos personalizados (Mobile First)
 
 .header {
-    background-image: url('../images/bg-pattern-intro-mobile.svg'), $gradient-intro;
-    background-size: 370% auto, 100% 100%;
-    background-position: -386px -272px, center top;
+    background-image: url('../images/bg-pattern-intro-mobile.svg'), $gradient-intro; // Imagen primero, gradiente después
+    background-size: 370% auto, 100% 100%; // Ajuste de tamaño (valores actuales del usuario)
+    background-position: -386px -272px, center top; // Ajuste de posición (valores actuales del usuario)
     background-repeat: no-repeat;
     color: $white;
     text-align: center;
-    padding: 20px 0 100px 0;
+    padding: 20px 0 100px 0; // Ajustar padding inferior
     position: relative;
     overflow: hidden;
-    border-bottom-left-radius: 80px;
+    border-bottom-left-radius: 80px; // Redondeo de esquina (valor actual del usuario)
 
     .navbar {
-        padding: 10px 20px;
+        padding: 10px 20px; // Ajustar padding de la barra de navegación
 
         .container-fluid {
             padding: 0;
@@ -57,7 +54,7 @@ body {
         .navbar-brand {
             color: $white;
             font-weight: $font-weight-semibold;
-            //font-size: 1.8rem;
+            //font-size: 1.8rem; // Comentado por el usuario
         }
 
         .navbar-toggler {
@@ -109,10 +106,12 @@ body {
                         }
 
                         .nav-link {
+                            // Estilos para Login
                             color: $blue-900;
                         }
 
                         .btn-primary {
+                            // Estilos para Sign Up
                             background: $gradient-intro;
                             color: $white;
                             font-family: $font-ubuntu;
@@ -135,13 +134,14 @@ body {
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        // min-height: 300px;
 
         h1 {
             color: $white;
             font-family: $font-overpass;
             font-weight: $font-weight-medium;
             margin-bottom: 15px;
-            //font-size: 2.5rem;
+            //font-size: 2.5rem; // Comentado por el usuario
             line-height: 1.2;
         }
 
@@ -150,11 +150,12 @@ body {
             font-family: $font-overpass;
             font-weight: $font-weight-light;
             margin-bottom: 40px;
-            //font-size: 1.1rem;
+            //font-size: 1.1rem; // Comentado por el usuario
         }
 
         .header-buttons {
             display: flex;
+            //flex-direction: column; // Descomentaremos en desktop
             gap: 15px;
             width: 100%;
             max-width: 350px;
@@ -185,6 +186,157 @@ body {
                     color: $red-500;
                     border-color: $white;
                 }
+            }
+        }
+    }
+}
+
+// Estilos para Tablet (a partir de 768px)
+@media (min-width: 768px) {
+     .header {
+        // Ajustes específicos para tablet
+         padding: 30px 40px 120px 40px; // Ajuste de padding
+
+        .header-content {
+            // align-items: flex-start; // Mantener centrado por ahora
+
+            h1 {
+                 font-size: 2.8rem; // Ajuste de tamaño de fuente para tablet
+            }
+
+            p {
+                 font-size: 1.15rem; // Ajuste de tamaño de fuente para tablet
+            }
+
+             .header-buttons {
+                 flex-direction: column; // Mantener apilado en tablet
+                 justify-content: center; // Centrar botones apilados
+                 max-width: 300px; // Ajustar ancho máximo
+                 .btn { width: 100%; } // Asegurar que los botones apilados ocupen todo el ancho
+             }
+        }
+    }
+}
+
+// Estilos para Desktop (a partir de 992px)
+@media (min-width: 992px) {
+    .header {
+        text-align: left; // Alinear texto a la izquierda en desktop
+        padding-bottom: 150px; // Ajustar padding inferior
+        //background-size: 100% 100%; // Ajustar tamaño del fondo si es necesario para desktop
+        //background-position: center; // Ajustar posición del fondo si es necesario para desktop
+
+        .navbar {
+            padding: 20px 80px; // Ajustar padding de la barra de navegación
+
+            .navbar-brand {
+                font-size: 2rem; // Ajustar tamaño del logo para desktop
+            }
+
+            // Estilos para los enlaces de navegación en desktop
+            .navbar-nav {
+                flex-direction: row; // Disposición horizontal
+                align-items: center; // Alinear verticalmente
+                margin-left: 30px; // Espacio entre logo y enlaces
+
+                .nav-item {
+                    margin-bottom: 0; // Eliminar margen inferior de móvil
+                    margin-right: 20px; // Espacio entre enlaces
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+
+                    .nav-link {
+                        color: $white; // Color de texto blanco
+                        font-weight: $font-weight-light; // Peso de fuente ligero
+                        text-align: left; // Alinear texto a la izquierda
+                        padding: 5px 0; // Ajustar padding
+
+                        &.active {
+                            font-weight: $font-weight-light; // Mantener peso ligero para activo
+                        }
+
+                         &:hover {
+                            text-decoration: underline; // Subrayado en hover
+                            opacity: 0.7; // Ligera opacidad en hover
+                         }
+                    }
+                }
+            }
+
+            // Estilos para los botones de autenticación en desktop
+            .ms-auto.d-flex {
+                 margin-left: 50px !important; // Ajustar margen a la izquierda
+                 align-items: center; // Alinear verticalmente
+
+                .nav-item {
+                    margin-bottom: 0; // Eliminar margen inferior de móvil
+                    margin-right: 20px; // Espacio entre Login y Sign Up
+
+                    .nav-link {
+                        color: $white; // Color de texto blanco para Login
+                         &:hover {
+                            opacity: 0.7; // Ligera opacidad en hover
+                         }
+                    }
+
+                    .btn-primary {
+                         width: auto; // Permitir que el botón tenga ancho automático
+                         padding: 10px 30px; // Ajustar padding del botón Sign Up
+                         background: $white; // Fondo blanco
+                         color: $red-500; // Texto rojo
+                         border-color: $white; // Borde blanco
+
+                          &:hover {
+                              background-color: lighten($red-400, 10%); // Cambiar fondo en hover
+                              color: $white; // Texto blanco en hover
+                              border-color: lighten($red-400, 10%); // Cambiar borde en hover
+                          }
+                    }
+                }
+            }
+        }
+
+        .header-content {
+             text-align: left; // Alinear contenido a la izquierda
+             padding: 60px 80px; // Ajustar padding
+             margin-top: 0; // Eliminar margen superior de móvil
+
+            h1 {
+                 font-size: 3.5rem; // Ajustar tamaño de fuente del título
+                 margin-bottom: 20px; // Aumentar margen inferior
+            }
+
+            p {
+                 font-size: 1.2rem; // Ajustar tamaño de fuente del subtítulo
+                 margin-bottom: 50px; // Aumentar margen inferior
+            }
+
+            .header-buttons {
+                 flex-direction: row; // Disposición horizontal para botones
+                 justify-content: flex-start; // Alinear a la izquierda
+                 max-width: none; // Eliminar límite de ancho
+                 padding-top: 0; // Eliminar padding superior
+
+                .btn {
+                    width: auto; // Ancho automático para botones
+                }
+
+                 .btn-light {
+                     &:hover {
+                          background-color: lighten($red-400, 10%); // Cambiar fondo en hover
+                          color: $white; // Texto blanco en hover
+                     }
+                 }
+
+                 .btn-outline-light {
+                      &:hover {
+                          background-color: $white; // Fondo blanco en hover
+                          color: $red-500; // Texto rojo en hover
+                          border-color: $white; // Borde blanco en hover
+                      }
+                 }
             }
         }
     }
