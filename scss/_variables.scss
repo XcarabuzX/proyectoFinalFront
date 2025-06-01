@@ -1,0 +1,35 @@
+// Colores Primarios
+$red-500: hsl(356, 100%, 66%);
+$red-400: hsl(355, 100%, 74%);
+$blue-900: hsl(208, 49%, 24%);
+
+// Colores Neutrales
+$white: hsl(0, 100%, 100%);
+$gray-600: hsl(207, 13%, 34%);
+$gray-900: hsl(240, 10%, 16%);
+
+// Gradientes
+$gradient-intro: linear-gradient(141deg, rgba(255, 143, 112, 1) 15%, rgba(255, 61, 83, 1) 100%);
+
+$gradient-body: linear-gradient(
+    to bottom,
+    hsl(237, 17%, 21%),
+    hsl(237, 23%, 31%)
+);
+
+// Tipografía
+$font-size-base: 1rem;
+
+// Fuentes
+$font-overpass: 'Overpass', sans-serif;
+$font-ubuntu: 'Ubuntu', sans-serif;
+
+// Pesos de fuente
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+// Sobrescribir variables de Bootstrap para evitar errores de unidades
+$nav-link-padding-y: .5rem;

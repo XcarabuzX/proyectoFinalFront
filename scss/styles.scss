@@ -1,0 +1,191 @@
+// Importar variables
+@import 'variables';
+
+// Importar Bootstrap
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// Importar fuentes de Google
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap');
+
+// Variables personalizadas
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+
+// Estilos base
+body {
+    font-family: $font-overpass;
+    font-size: $font-size-base;
+    color: $gray-600;
+}
+
+// Clases de utilidad para fuentes
+.font-ubuntu {
+    font-family: $font-ubuntu;
+}
+
+// Clases de utilidad para pesos de fuente
+.fw-light { font-weight: $font-weight-light; }
+.fw-regular { font-weight: $font-weight-regular; }
+.fw-medium { font-weight: $font-weight-medium; }
+.fw-semibold { font-weight: $font-weight-semibold; }
+.fw-bold { font-weight: $font-weight-bold; }
+
+// Estilos personalizados
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+.header {
+    background-image: url('../images/bg-pattern-intro-mobile.svg'), $gradient-intro;
+    background-size: 370% auto, 100% 100%;
+    background-position: -386px -272px, center top;
+    background-repeat: no-repeat;
+    color: $white;
+    text-align: center;
+    padding: 20px 0 100px 0;
+    position: relative;
+    overflow: hidden;
+    border-bottom-left-radius: 80px;
+
+    .navbar {
+        padding: 10px 20px;
+
+        .container-fluid {
+            padding: 0;
+        }
+
+        .navbar-brand {
+            color: $white;
+            font-weight: $font-weight-semibold;
+            //font-size: 1.8rem;
+        }
+
+        .navbar-toggler {
+            border-color: rgba(255, 255, 255, 0.5);
+
+            .navbar-toggler-icon {
+                background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h22M4 15h22M4 22h22'/%3E%3C/svg%3E");
+            }
+        }
+
+        .navbar-collapse {
+            background-color: $white;
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+            .navbar-nav {
+                .nav-item {
+                    margin-bottom: 15px;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+
+                    .nav-link {
+                        color: $blue-900;
+                        font-family: $font-ubuntu;
+                        font-weight: $font-weight-medium;
+                        text-align: center;
+                        padding: 10px 0;
+
+                        &.active {
+                            font-weight: $font-weight-bold;
+                        }
+                    }
+                }
+
+                &.ms-auto {
+                    margin-top: 20px;
+                    padding-top: 20px;
+                    border-top: 1px solid rgba(0, 0, 0, 0.1);
+
+                    .nav-item {
+                        margin-bottom: 10px;
+
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+
+                        .nav-link {
+                            color: $blue-900;
+                        }
+
+                        .btn-primary {
+                            background: $gradient-intro;
+                            color: $white;
+                            font-family: $font-ubuntu;
+                            font-weight: $font-weight-bold;
+                            padding: 10px 25px;
+                            border-radius: 30px;
+                            border: none;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .header-content {
+        margin-top: 100px;
+        padding: 40px 20px 80px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        h1 {
+            color: $white;
+            font-family: $font-overpass;
+            font-weight: $font-weight-medium;
+            margin-bottom: 15px;
+            //font-size: 2.5rem;
+            line-height: 1.2;
+        }
+
+        p {
+            color: $white;
+            font-family: $font-overpass;
+            font-weight: $font-weight-light;
+            margin-bottom: 40px;
+            //font-size: 1.1rem;
+        }
+
+        .header-buttons {
+            display: flex;
+            gap: 15px;
+            width: 100%;
+            max-width: 350px;
+            padding-top: 25px;
+
+            .btn {
+                width: 100%;
+            }
+
+            .btn-light {
+                color: $red-500;
+                font-family: $font-ubuntu;
+                font-weight: $font-weight-bold;
+                padding: 10px 25px;
+                border-radius: 30px;
+            }
+
+            .btn-outline-light {
+                color: $white;
+                border-color: $white;
+                font-family: $font-ubuntu;
+                font-weight: $font-weight-bold;
+                padding: 10px 25px;
+                border-radius: 30px;
+
+                &:hover {
+                    background-color: $white;
+                    color: $red-500;
+                    border-color: $white;
+                }
+            }
+        }
+    }
+} 
