@@ -11887,12 +11887,12 @@ body {
 
 .header {
   background-image: url("../images/bg-pattern-intro-mobile.svg"), linear-gradient(141deg, rgb(255, 143, 112) 15%, rgb(255, 61, 83) 100%);
-  background-size: 370% auto, 100% 100%;
-  background-position: -386px -272px, center top;
+  background-size: 350% auto, 100% 100%;
+  background-position: -345px -300px, center top;
   background-repeat: no-repeat;
   color: hsl(0, 100%, 100%);
   text-align: center;
-  padding: 20px 0 100px 0;
+  padding-top: 20px;
   position: relative;
   overflow: hidden;
   border-bottom-left-radius: 80px;
@@ -11995,7 +11995,7 @@ body {
   color: hsl(356, 100%, 66%);
   font-family: "Ubuntu", sans-serif;
   font-weight: 700;
-  padding: 10px 25px;
+  padding: 10px 10px;
   border-radius: 30px;
 }
 .header .header-content .header-buttons .btn-outline-light {
@@ -12014,18 +12014,11 @@ body {
 
 @media (min-width: 768px) {
   .header {
-    padding: 30px 40px 120px 40px;
-  }
-  .header .header-content h1, .header .header-content .h1 {
-    font-size: 2.8rem;
-  }
-  .header .header-content p {
-    font-size: 1.15rem;
+    background-size: 200% auto, 100% 100%;
+    background-position: -300px -352px, center top;
   }
   .header .header-content .header-buttons {
-    flex-direction: column;
     justify-content: center;
-    max-width: 300px;
   }
   .header .header-content .header-buttons .btn {
     width: 100%;
@@ -12033,11 +12026,15 @@ body {
 }
 @media (min-width: 992px) {
   .header {
+    background-size: 160% auto, 100% 100%;
+    background-position: -150px -920px, center top;
     text-align: left;
-    padding-bottom: 150px;
   }
   .header .navbar {
     padding: 20px 80px;
+  }
+  .header .navbar .navbar-collapse {
+    display: none !important;
   }
   .header .navbar .navbar-brand {
     font-size: 2rem;
@@ -12108,7 +12105,6 @@ body {
   }
   .header .header-content .header-buttons {
     flex-direction: row;
-    justify-content: flex-start;
     max-width: none;
     padding-top: 0;
   }
@@ -12123,6 +12119,112 @@ body {
     background-color: hsl(0, 100%, 100%);
     color: hsl(356, 100%, 66%);
     border-color: hsl(0, 100%, 100%);
+  }
+  .designed-for-future {
+    padding: 100px 80px 100px 160px;
+  }
+  .designed-for-future h2, .designed-for-future .h2 {
+    text-align: center;
+  }
+  .designed-for-future .row {
+    flex-direction: row;
+    align-items: center;
+  }
+  .designed-for-future img {
+    margin: 0;
+    margin-right: -5%;
+    max-width: none;
+    width: auto;
+    position: relative;
+    z-index: 1;
+  }
+  .designed-for-future .text-content {
+    text-align: left;
+    padding-left: 80px;
+    padding-right: 0;
+  }
+  .designed-for-future .text-content h3, .designed-for-future .text-content .h3 {
+    font-size: 1.8rem;
+  }
+  .designed-for-future .text-content p {
+    margin-bottom: 40px;
+  }
+}
+.designed-for-future {
+  padding: 60px 20px;
+  overflow: hidden;
+}
+.designed-for-future h2, .designed-for-future .h2 {
+  font-family: "Overpass", sans-serif;
+  font-weight: 600;
+  color: hsl(208, 49%, 24%);
+  margin-bottom: 40px;
+  text-align: center;
+}
+.designed-for-future .row {
+  align-items: center;
+}
+.designed-for-future img {
+  display: block;
+  margin: 0 auto 40px auto;
+  max-width: 100%;
+}
+.designed-for-future .text-content {
+  text-align: center;
+}
+.designed-for-future .text-content h3, .designed-for-future .text-content .h3 {
+  font-family: "Overpass", sans-serif;
+  font-weight: 600;
+  color: hsl(208, 49%, 24%);
+  margin-bottom: 20px;
+}
+.designed-for-future .text-content p {
+  font-family: "Overpass", sans-serif;
+  font-weight: 300;
+  color: hsl(207, 13%, 34%);
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+@media (min-width: 768px) {
+  .designed-for-future {
+    padding: 80px 40px;
+  }
+  .designed-for-future h2, .designed-for-future .h2 {
+    margin-bottom: 60px;
+  }
+  .designed-for-future img {
+    margin-bottom: 60px;
+  }
+  .designed-for-future .text-content h3, .designed-for-future .text-content .h3 {
+    font-size: 1.7rem;
+  }
+}
+@media (min-width: 992px) {
+  .designed-for-future {
+    padding: 100px 80px 100px 160px;
+  }
+  .designed-for-future h2, .designed-for-future .h2 {
+    text-align: left;
+  }
+  .designed-for-future .row {
+    flex-direction: row;
+    align-items: center;
+  }
+  .designed-for-future img {
+    margin: 0;
+    transform: translateX(-20%);
+  }
+  .designed-for-future .text-content {
+    text-align: left;
+    padding-left: 80px;
+    padding-right: 0;
+  }
+  .designed-for-future .text-content h3, .designed-for-future .text-content .h3 {
+    font-size: 1.8rem;
+  }
+  .designed-for-future .text-content p {
+    margin-bottom: 40px;
   }
 }
 

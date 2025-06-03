@@ -34,12 +34,12 @@ body {
 
 .header {
     background-image: url('../images/bg-pattern-intro-mobile.svg'), $gradient-intro; // Imagen primero, gradiente después
-    background-size: 370% auto, 100% 100%; // Ajuste de tamaño (valores actuales del usuario)
-    background-position: -386px -272px, center top; // Ajuste de posición (valores actuales del usuario)
+    background-size: 350% auto, 100% 100%; // Ajuste de tamaño (valores actuales del usuario)
+    background-position: -345px -300px, center top; // Ajuste de posición (valores actuales del usuario)
     background-repeat: no-repeat;
     color: $white;
     text-align: center;
-    padding: 20px 0 100px 0; // Ajustar padding inferior
+    padding-top: 20px;
     position: relative;
     overflow: hidden;
     border-bottom-left-radius: 80px; // Redondeo de esquina (valor actual del usuario)
@@ -169,7 +169,7 @@ body {
                 color: $red-500;
                 font-family: $font-ubuntu;
                 font-weight: $font-weight-bold;
-                padding: 10px 25px;
+                padding: 10px 10px;
                 border-radius: 30px;
             }
 
@@ -194,24 +194,14 @@ body {
 // Estilos para Tablet (a partir de 768px)
 @media (min-width: 768px) {
      .header {
-        // Ajustes específicos para tablet
-         padding: 30px 40px 120px 40px; // Ajuste de padding
+        background-size: 200% auto, 100% 100%;
+        background-position: -300px -352px, center top;
 
         .header-content {
             // align-items: flex-start; // Mantener centrado por ahora
 
-            h1 {
-                 font-size: 2.8rem; // Ajuste de tamaño de fuente para tablet
-            }
-
-            p {
-                 font-size: 1.15rem; // Ajuste de tamaño de fuente para tablet
-            }
-
              .header-buttons {
-                 flex-direction: column; // Mantener apilado en tablet
                  justify-content: center; // Centrar botones apilados
-                 max-width: 300px; // Ajustar ancho máximo
                  .btn { width: 100%; } // Asegurar que los botones apilados ocupen todo el ancho
              }
         }
@@ -221,13 +211,18 @@ body {
 // Estilos para Desktop (a partir de 992px)
 @media (min-width: 992px) {
     .header {
+        background-size: 160% auto, 100% 100%;
+        background-position: -150px -920px, center top;
         text-align: left; // Alinear texto a la izquierda en desktop
-        padding-bottom: 150px; // Ajustar padding inferior
         //background-size: 100% 100%; // Ajustar tamaño del fondo si es necesario para desktop
         //background-position: center; // Ajustar posición del fondo si es necesario para desktop
 
         .navbar {
             padding: 20px 80px; // Ajustar padding de la barra de navegación
+
+            .navbar-collapse {
+                 display: none !important; // Ocultar el menú colapsado en desktop
+            }
 
             .navbar-brand {
                 font-size: 2rem; // Ajustar tamaño del logo para desktop
@@ -315,7 +310,6 @@ body {
 
             .header-buttons {
                  flex-direction: row; // Disposición horizontal para botones
-                 justify-content: flex-start; // Alinear a la izquierda
                  max-width: none; // Eliminar límite de ancho
                  padding-top: 0; // Eliminar padding superior
 
@@ -337,6 +331,145 @@ body {
                           border-color: $white; // Borde blanco en hover
                       }
                  }
+            }
+        }
+    }
+
+    .designed-for-future {
+        padding: 100px 80px 100px 160px; // Ajustar padding para desktop
+
+        h2 {
+            text-align: center; // Asegurar que el título principal esté centrado en desktop
+        }
+
+        .row {
+            flex-direction: row; // Imagen a la izquierda, texto a la derecha
+            align-items: center; // Alinear verticalmente
+        }
+
+        img {
+            margin: 0; // Eliminar márgenes de móvil/tablet
+            // Ajustar la posición de la imagen para que se superponga
+            // Usaremos margin-right negativo para superponer la imagen sobre la columna de texto
+            margin-right: -5%; // Ajustar según sea necesario para la superposición
+            max-width: none; // Permitir que la imagen sea más grande que su contenedor de columna
+            width: auto; // Ancho automático
+            position: relative; // Para asegurar que el z-index funcione si es necesario
+            z-index: 1; // Asegurar que la imagen esté sobre el texto si hay superposición
+        }
+
+        .text-content {
+            text-align: left; // Alinear texto a la izquierda en desktop
+            padding-left: 80px; // Añadir padding a la izquierda para separar del imagen
+            padding-right: 0; // Eliminar padding derecho si se había añadido antes
+
+            h3 {
+                font-size: 1.8rem; // Ajustar tamaño de fuente
+            }
+
+            p {
+                margin-bottom: 40px; // Ajustar margen inferior
+            }
+        }
+    }
+}
+
+// Estilos para la sección "Designed for the future"
+.designed-for-future {
+    padding: 60px 20px;
+    overflow: hidden; // Para contener cualquier elemento flotante si los hubiera
+
+    h2 {
+        font-family: $font-overpass;
+        font-weight: $font-weight-semibold;
+        color: $blue-900;
+        margin-bottom: 40px;
+        text-align: center; // Centrar título en móvil
+    }
+
+    .row {
+        align-items: center; // Centrar verticalmente el contenido de las columnas
+    }
+
+    img {
+        display: block; // Asegurar que la imagen se comporta como bloque
+        margin: 0 auto 40px auto; // Centrar la imagen en móvil y añadir espacio inferior
+        max-width: 100%; // Asegurar que la imagen no se salga del contenedor
+    }
+
+    .text-content {
+        text-align: center; // Alinear texto al centro en móvil
+
+        h3 {
+            font-family: $font-overpass;
+            font-weight: $font-weight-semibold;
+            color: $blue-900;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-family: $font-overpass;
+            font-weight: $font-weight-light;
+            color: $gray-600;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+    }
+}
+
+// Estilos para Tablet (a partir de 768px)
+@media (min-width: 768px) {
+    .designed-for-future {
+        padding: 80px 40px;
+
+        h2 {
+            margin-bottom: 60px;
+        }
+
+        img {
+            margin-bottom: 60px; // Más espacio debajo de la imagen en tablet
+        }
+
+         .text-content {
+             h3 {
+                 font-size: 1.7rem; // Ajustar tamaño de fuente de subtítulos
+             }
+         }
+    }
+}
+
+// Estilos para Desktop (a partir de 992px)
+@media (min-width: 992px) {
+    .designed-for-future {
+         padding: 100px 80px 100px 160px; // Ajustar padding para desktop
+
+        h2 {
+            text-align: left; // Alinear título a la izquierda en desktop
+        }
+
+        .row {
+            flex-direction: row; // Mantener orden normal (imagen a la izquierda, texto a la derecha en este caso)
+            align-items: center; // Alinear verticalmente
+        }
+
+        img {
+            margin: 0; // Eliminar márgenes de móvil/tablet
+            // Ajustar la posición de la imagen para que se superponga
+            // Esto puede requerir posicionamiento absoluto o ajustar márgenes negativos
+             transform: translateX(-20%); // Ejemplo: mover la imagen a la izquierda para superponer
+        }
+
+        .text-content {
+            text-align: left; // Alinear texto a la izquierda en desktop
+            padding-left: 80px; // Añadir padding a la izquierda para separar del imagen
+             padding-right: 0; // Eliminar padding derecho si se había añadido antes
+
+            h3 {
+                font-size: 1.8rem; // Ajustar tamaño de fuente
+            }
+
+            p {
+                margin-bottom: 40px; // Ajustar margen inferior
             }
         }
     }
