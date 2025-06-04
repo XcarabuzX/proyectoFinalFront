@@ -336,40 +336,47 @@ body {
     }
 
     .designed-for-future {
-        padding: 100px 80px 100px 160px; // Ajustar padding para desktop
+        padding: 100px 0; // Padding general top/bottom para la sección
 
         h2 {
-            text-align: center; // Asegurar que el título principal esté centrado en desktop
+            text-align: center; // Título principal centrado
+             margin-bottom: 80px; // Espacio debajo del título
         }
 
         .row {
-            flex-direction: row; // Imagen a la izquierda, texto a la derecha
-            align-items: center; // Alinear verticalmente
+            display: flex; // Usar Flexbox
+            align-items: center; // Alinear verticalmente el contenido de la fila
+            justify-content: space-between; // Espacio entre el texto y la imagen
         }
 
-        img {
-            margin: 0; // Eliminar márgenes de móvil/tablet
-            // Ajustar la posición de la imagen para que se superponga
-            // Usaremos margin-right negativo para superponer la imagen sobre la columna de texto
-            margin-right: -5%; // Ajustar según sea necesario para la superposición
-            max-width: none; // Permitir que la imagen sea más grande que su contenedor de columna
-            width: auto; // Ancho automático
-            position: relative; // Para asegurar que el z-index funcione si es necesario
-            z-index: 1; // Asegurar que la imagen esté sobre el texto si hay superposición
+        .row > div:first-child { // Estilos para el contenedor de texto
+            width: 45%; // Dar un ancho al contenedor de texto (ajustar según sea necesario)
+             padding: 0 40px 0 0; // Ajustar padding para el contenedor de texto
+
+            .text-content {
+                text-align: left; // Alinear texto a la izquierda
+                padding: 0; // Eliminar padding del text-content si lo tenía
+
+                h3 {
+                    font-size: 1.8rem; // Tamaño de fuente para subtítulos
+                     white-space: nowrap; // Evitar que los títulos se corten en desktop
+                }
+
+                p {
+                    margin-bottom: 40px; // Margen inferior para párrafos
+                }
+            }
         }
 
-        .text-content {
-            text-align: left; // Alinear texto a la izquierda en desktop
-            padding-left: 80px; // Añadir padding a la izquierda para separar del imagen
-            padding-right: 0; // Eliminar padding derecho si se había añadido antes
-
-            h3 {
-                font-size: 1.8rem; // Ajustar tamaño de fuente
-            }
-
-            p {
-                margin-bottom: 40px; // Ajustar margen inferior
-            }
+        img { // Estilos para la imagen (ahora hija directa de .row)
+            display: block; // Asegurar comportamiento de bloque
+            margin: 0; // Eliminar márgenes por defecto
+            max-width: none; // Permitir que la imagen sea más ancha que su contenedor
+            width: auto; // Ancho automático o un porcentaje grande
+            position: relative; // Establecer contexto de posicionamiento
+            left: 10%; // Ajustar este valor para posicionar la imagen (positivo para mover a la derecha desde su posición normal)
+            height: 600px; // Ajustar la altura de la imagen si es necesario para el recorte
+            z-index: 1; // Asegurar que la imagen esté en una capa superior
         }
     }
 }
@@ -441,28 +448,74 @@ body {
 // Estilos para Desktop (a partir de 992px)
 @media (min-width: 992px) {
     .designed-for-future {
-         padding: 100px 80px 100px 160px; // Ajustar padding para desktop
+         padding: 100px 0; // Eliminar padding left/right específicos para desktop aquí
 
         h2 {
-            text-align: left; // Alinear título a la izquierda en desktop
+            text-align: center; // Asegurar que el título principal esté centrado en desktop
+             margin-bottom: 80px; // Aumentar espacio debajo del título
         }
 
         .row {
-            flex-direction: row; // Mantener orden normal (imagen a la izquierda, texto a la derecha en este caso)
             align-items: center; // Alinear verticalmente
         }
 
         img {
+            display: block; // Asegurar comportamiento de bloque
             margin: 0; // Eliminar márgenes de móvil/tablet
-            // Ajustar la posición de la imagen para que se superponga
-            // Esto puede requerir posicionamiento absoluto o ajustar márgenes negativos
-             transform: translateX(-20%); // Ejemplo: mover la imagen a la izquierda para superponer
+            max-width: none; // Permitir que la imagen sea más grande que su contenedor
+            // Posicionar la imagen para que se vea a la derecha y abarque la sección
+            height: 50%;
+             //margin-left: 44%; // Ajustar este valor para el posicionamiento exacto (negativo para mover a la izquierda)
+             left: 42%;
+            position: relative; // Puede ser útil si se necesita ajustar z-index
+            z-index: 1; // Asegurar que la imagen esté sobre otros elementos si es necesario
         }
 
         .text-content {
             text-align: left; // Alinear texto a la izquierda en desktop
-            padding-left: 80px; // Añadir padding a la izquierda para separar del imagen
-             padding-right: 0; // Eliminar padding derecho si se había añadido antes
+             padding: 0 80px 0 160px; // Ajustar padding del contenido de texto (top right bottom left)
+
+            h3 {
+                font-size: 1.8rem; // Ajustar tamaño de fuente
+            }
+
+            p {
+                margin-bottom: 40px; // Ajustar margen inferior
+            }
+        }
+    }
+} 
+
+// Estilos para Desktop (a partir de 1600px)
+@media (min-width: 1600px) {
+    .designed-for-future {
+         padding: 250px 0 100px 0; 
+
+        h2 {
+            text-align: center; // Asegurar que el título principal esté centrado en desktop
+             margin-bottom: 80px; // Aumentar espacio debajo del título
+             font-weight: $font-weight-semibold;
+             font-size: 2.5rem;
+        }
+
+        .row {
+            align-items: center; // Alinear verticalmente
+        }
+
+        img {
+            display: block; // Asegurar comportamiento de bloque
+            margin: 0; // Eliminar márgenes de móvil/tablet
+            max-width: none; // Permitir que la imagen sea más grande que su contenedor
+            height: 72rem;
+            left: 56%;
+            bottom: 250px;
+            position: relative; // Puede ser útil si se necesita ajustar z-index
+            z-index: 1; // Asegurar que la imagen esté sobre otros elementos si es necesario
+        }
+
+        .text-content {
+            text-align: left; // Alinear texto a la izquierda en desktop
+             padding: 0 80px 0 160px; // Ajustar padding del contenido de texto (top right bottom left)
 
             h3 {
                 font-size: 1.8rem; // Ajustar tamaño de fuente

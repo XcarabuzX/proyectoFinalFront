@@ -12121,33 +12121,41 @@ body {
     border-color: hsl(0, 100%, 100%);
   }
   .designed-for-future {
-    padding: 100px 80px 100px 160px;
+    padding: 100px 0;
   }
   .designed-for-future h2, .designed-for-future .h2 {
     text-align: center;
+    margin-bottom: 80px;
   }
   .designed-for-future .row {
-    flex-direction: row;
+    display: flex;
     align-items: center;
+    justify-content: space-between;
+  }
+  .designed-for-future .row > div:first-child {
+    width: 45%;
+    padding: 0 40px 0 0;
+  }
+  .designed-for-future .row > div:first-child .text-content {
+    text-align: left;
+    padding: 0;
+  }
+  .designed-for-future .row > div:first-child .text-content h3, .designed-for-future .row > div:first-child .text-content .h3 {
+    font-size: 1.8rem;
+    white-space: nowrap;
+  }
+  .designed-for-future .row > div:first-child .text-content p {
+    margin-bottom: 40px;
   }
   .designed-for-future img {
+    display: block;
     margin: 0;
-    margin-right: -5%;
     max-width: none;
     width: auto;
     position: relative;
+    left: 10%;
+    height: 600px;
     z-index: 1;
-  }
-  .designed-for-future .text-content {
-    text-align: left;
-    padding-left: 80px;
-    padding-right: 0;
-  }
-  .designed-for-future .text-content h3, .designed-for-future .text-content .h3 {
-    font-size: 1.8rem;
-  }
-  .designed-for-future .text-content p {
-    margin-bottom: 40px;
   }
 }
 .designed-for-future {
@@ -12202,23 +12210,61 @@ body {
 }
 @media (min-width: 992px) {
   .designed-for-future {
-    padding: 100px 80px 100px 160px;
+    padding: 100px 0;
   }
   .designed-for-future h2, .designed-for-future .h2 {
-    text-align: left;
+    text-align: center;
+    margin-bottom: 80px;
   }
   .designed-for-future .row {
-    flex-direction: row;
     align-items: center;
   }
   .designed-for-future img {
+    display: block;
     margin: 0;
-    transform: translateX(-20%);
+    max-width: none;
+    height: 50%;
+    left: 42%;
+    position: relative;
+    z-index: 1;
   }
   .designed-for-future .text-content {
     text-align: left;
-    padding-left: 80px;
-    padding-right: 0;
+    padding: 0 80px 0 160px;
+  }
+  .designed-for-future .text-content h3, .designed-for-future .text-content .h3 {
+    font-size: 1.8rem;
+  }
+  .designed-for-future .text-content p {
+    margin-bottom: 40px;
+  }
+}
+@media (min-width: 1600px) {
+  .designed-for-future {
+    padding: 250px 0 100px 0;
+  }
+  .designed-for-future h2, .designed-for-future .h2 {
+    text-align: center;
+    margin-bottom: 80px;
+    font-weight: 600;
+    font-size: 2.5rem;
+  }
+  .designed-for-future .row {
+    align-items: center;
+  }
+  .designed-for-future img {
+    display: block;
+    margin: 0;
+    max-width: none;
+    height: 72rem;
+    left: 56%;
+    bottom: 250px;
+    position: relative;
+    z-index: 1;
+  }
+  .designed-for-future .text-content {
+    text-align: left;
+    padding: 0 80px 0 160px;
   }
   .designed-for-future .text-content h3, .designed-for-future .text-content .h3 {
     font-size: 1.8rem;
