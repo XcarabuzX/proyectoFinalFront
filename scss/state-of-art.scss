@@ -8,8 +8,8 @@
     top: -2rem; // Ajusta este valor para mover la imagen hacia arriba o abajo
     left: 50%; // Centrar horizontalmente
     transform: translateX(-50%); // Ajustar centrado exacto
-    width: 100%; // Ocupar el ancho disponible en mobile
-    max-width: 300px; // Limitar el tamaño máximo en mobile
+    //width: 100%; // Ocupar el ancho disponible en mobile
+    width: 300px; // Limitar el tamaño máximo en mobile
     height: auto;
     z-index: 3; // Asegurar que esté por encima de la sección
     margin-bottom: -80px; // Ajusta este margen negativo para que la sección se acerque a la imagen
@@ -70,15 +70,22 @@
     }
 }
 
+// Estilos para Tablet (a partir de 768px)
+@media (min-width: 768px) {
+    .illustration-phones {
+        top: -100px; // Ajustar para tablet
+    }
+}
+
 // Estilos para Desktop (a partir de 992px)
 @media (min-width: 992px) {
     .illustration-phones {
         position: relative; // Mantener posicionamiento relativo
         top: 0; // Ajusta este valor para desktop
         left: 80px; // Posicionar a la izquierda en desktop
-        transform: none; // Eliminar transformación de centrado
+        //transform: none; // Eliminar transformación de centrado
         width: auto; // Ancho automático
-        max-width: 500px; // Ajustar tamaño máximo
+        //max-width: 500px; // Ajustar tamaño máximo
         margin-bottom: 0; // Eliminar margen negativo si no es necesario en desktop
     }
 
@@ -104,9 +111,9 @@
             position: absolute; // Mantener posicionamiento absoluto
             top: -100px; // Ajustar para que sobresalga por arriba
             left: 80px; // Posicionar a la izquierda
-            transform: none; // Eliminar transformación de centrado
+            //transform: none; // Eliminar transformación de centrado
             width: auto; // Ancho automático
-            max-width: 500px; // Ajustar tamaño máximo
+            //max-width: 500px; // Ajustar tamaño máximo
             // margin: 0; // No usar margin con position absolute
             z-index: 5; // Aumentar z-index
         }
@@ -130,26 +137,52 @@
 // Estilos para Desktop (a partir de 1600px)
 @media (min-width: 1600px) {
      .illustration-phones {
-        top: -50px; // Ajusta este valor para pantallas grandes
-        left: 100px; // Ajustar posición
-        width: 550px; // Ancho fijo para la imagen
+        position: absolute; // Usar absolute para posicionar precisamente respecto al body/viewport
+        top: 106rem; // Ajustar verticalmente (puede requerir ajustes)
+        left: 25rem; // Ajustar horizontalmente para sobresalir por la izquierda
+        //transform: translateY(-50%); // Centrar verticalmente basado en su propia altura
+        width: 40rem; // Ancho fijo para la imagen
+        z-index: 3; // Asegurar que esté por encima de la sección
     }
 
     .state-of-art {
+        height: 30rem;
         padding: 150px 160px 150px 160px; // Ajustar padding para pantallas grandes
+        //height: auto; // Asegurar altura automática
+        bottom: -28rem; // Eliminar bottom
+        overflow: hidden; // Mantener para recortar los círculos
+
+        .container {
+            flex-direction: row; // Disposición horizontal
+             align-items: center; // Alinear verticalmente contenido interno
+             justify-content: flex-end; // Alinear contenido al final (derecha), asumiendo que la imagen está a la izquierda
+        }
 
         .background-circles {
-            width: 1000px; // Ajustar tamaño para pantallas muy grandes
-             top: -100px;
-             left: -250px;
+            position: absolute; // Mantener absolute dentro de la sección
+            width: 66rem; // Ajustar tamaño para pantallas muy grandes
+            top: -30rem; // Ajustar posición vertical
+            left: -13.5rem; // Ajustar posición horizontal para que no sobresalga por la izquierda
+            transform: none;
+            z-index: 1; // Detrás del contenido
         }
 
         .text-content {
-             width: 40%; // Ajustar ancho del texto
-             padding-left: 100px; // Ajustar espacio a la izquierda
+             width: 100%; // Ajustar ancho del texto
+             top: -2rem;
+             padding-left: 0; // Eliminar padding-left anterior
+             margin-left: 30rem; // Añadir margen a la izquierda igual al ancho de la imagen de los teléfonos para crear espacio
+             text-align: left; // Alinear texto a la izquierda
+             z-index: 2; // Asegurar que esté por encima de los círculos
 
             h2 {
                  font-size: 3rem; // Ajustar tamaño de fuente
+            }
+
+            p {
+                max-width: 48rem;
+                font-size: 1.5rem;
+                text-align: justify; // Alinear texto a la izquierda
             }
         }
     }
