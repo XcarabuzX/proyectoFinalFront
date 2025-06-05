@@ -3,7 +3,7 @@
 
 .designed-for-future {
     padding: 80px 20px;
-    //overflow: hidden;
+    overflow-x: hidden;
     position: relative;
 
     h2 {
@@ -73,6 +73,7 @@
             display: block;
             margin: 0;
             max-width: none;
+
             width: 80rem;
             position: absolute;
             right: -25rem;

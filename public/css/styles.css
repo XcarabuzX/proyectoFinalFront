@@ -12093,6 +12093,7 @@ textarea.form-control-lg {
 }
 .designed-for-future {
   padding: 80px 20px;
+  overflow-x: hidden;
   position: relative;
 }
 .designed-for-future h2, .designed-for-future .h2 {
