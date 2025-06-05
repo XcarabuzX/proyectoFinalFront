@@ -1,0 +1,101 @@
+// Importar variables
+@import 'variables';
+
+.designed-for-future {
+    padding: 80px 20px;
+    overflow: hidden;
+    position: relative;
+
+    h2 {
+        font-family: $font-overpass;
+        font-weight: $font-weight-semibold;
+        color: $blue-900;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    .row {
+        align-items: center;
+    }
+
+    img {
+        display: block;
+        margin: 0 auto 40px auto;
+        max-width: 100%;
+    }
+
+    .text-content {
+        text-align: center;
+
+        h3 {
+            font-family: $font-overpass;
+            font-weight: $font-weight-semibold;
+            color: $blue-900;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-family: $font-overpass;
+            font-weight: $font-weight-light;
+            color: $gray-600;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+    }
+}
+
+// Estilos para Desktop (a partir de 1600px)
+@media (min-width: 1600px) {
+    .designed-for-future {
+        padding: 200px 0 100px 0;
+        display: flex;
+        align-items: center;
+
+        h2 {
+            margin-bottom: 80px;
+            font-size: 2.5rem;
+        }
+
+        .row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .row > div:first-child {
+            width: 45%;
+            padding: 0 80px 0 160px;
+            text-align: left;
+        }
+
+        img {
+            display: block;
+            margin: 0;
+            max-width: none;
+            width: 80rem;
+            position: absolute;
+            right: -25rem;
+            bottom: -22rem;
+            z-index: 1;
+        }
+
+        .container-text {
+            max-width: 33rem;
+        }
+
+        .text-content {
+            text-align: left;
+            padding: 0;
+
+            h3 {
+                font-size: 1.8rem;
+                white-space: nowrap;
+            }
+
+            p {
+                margin-bottom: 40px;
+            }
+        }
+    }
+} 
