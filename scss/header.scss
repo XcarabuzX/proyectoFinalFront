@@ -1,4 +1,3 @@
-// Importar variables
 @import 'variables';
 
 .header {
@@ -151,27 +150,22 @@
             }
         }
     }
-} 
+}
 
-
-// Estilos para Tablet (a partir de 768px)
 @media (min-width: 768px) {
     .header {
        background-size: 200% auto, 100% 100%;
        background-position: -300px -352px, center top;
 
        .header-content {
-           // align-items: flex-start; // Mantener centrado por ahora
-
             .header-buttons {
-                justify-content: center; // Centrar botones apilados
-                .btn { width: 100%; } // Asegurar que los botones apilados ocupen todo el ancho
+                justify-content: center;
+                .btn { width: 100%; }
             }
        }
    }
 }
 
-// Estilos para Desktop (a partir de 992px)
 @media (min-width: 992px) {
    .header {
        background-size: 160% auto, 100% 100%;

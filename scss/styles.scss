@@ -1,36 +1,28 @@
-// Importar variables
 @import 'variables';
 
-// Importar Bootstrap
 @import "../node_modules/bootstrap/scss/bootstrap";
 
-// Importar fuentes de Google
 @import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap');
 
-// Importar secciones
 @import 'header';
 @import 'designed-for-future';
 @import 'state-of-art';
 @import 'free-open-simple';
 @import 'footer';
 
-// Variables personalizadas
 $primary-color: #007bff;
 $secondary-color: #6c757d;
 
-// Estilos base
 body {
     font-family: $font-overpass;
     font-size: $font-size-base;
     color: $gray-600;
 }
 
-// Clases de utilidad para fuentes
 .font-ubuntu {
     font-family: $font-ubuntu;
 }
 
-// Clases de utilidad para pesos de fuente
 .fw-light { font-weight: $font-weight-light; }
 .fw-regular { font-weight: $font-weight-regular; }
 .fw-medium { font-weight: $font-weight-medium; }
