@@ -12350,7 +12350,7 @@ textarea.form-control-lg {
 }
 .free-open-simple {
   background-color: hsl(0, 100%, 100%);
-  padding: 80px 20px;
+  padding: 0px 20px 80px 20px;
   text-align: center;
 }
 .free-open-simple img {
@@ -12404,6 +12404,7 @@ textarea.form-control-lg {
 }
 .footer {
   background-color: hsl(208, 49%, 24%);
+  border-top-right-radius: 80px;
   color: #dee2e6;
   padding: 60px 20px;
   text-align: center;

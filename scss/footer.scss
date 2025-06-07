@@ -3,6 +3,7 @@
 
 .footer {
     background-color: $blue-900; // Usar el color de fondo oscuro
+    border-top-right-radius: 80px;
     color: $gray-300; // Color de texto para enlaces y párrafos
     padding: 60px 20px; // Padding para mobile
     text-align: center; // Centrar contenido en mobile
