@@ -12307,15 +12307,15 @@ textarea.form-control-lg {
 @media (min-width: 1600px) {
   .illustration-phones {
     position: absolute;
-    top: 106rem;
+    top: 85rem;
     left: 25rem;
-    width: 40rem;
+    width: 42rem;
     z-index: 3;
   }
   .state-of-art {
     height: 30rem;
     padding: 150px 160px 150px 160px;
-    bottom: -28rem;
+    bottom: -8rem;
     overflow: hidden;
   }
   .state-of-art .container {
@@ -12346,6 +12346,132 @@ textarea.form-control-lg {
     max-width: 48rem;
     font-size: 1.5rem;
     text-align: justify;
+  }
+}
+.free-open-simple {
+  background-color: hsl(0, 100%, 100%);
+  padding: 80px 20px;
+  text-align: center;
+}
+.free-open-simple img {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  margin: 0 auto 60px auto;
+}
+.free-open-simple .text-content h2, .free-open-simple .text-content .h2 {
+  font-family: "Overpass", sans-serif;
+  font-weight: 600;
+  color: hsl(208, 49%, 24%);
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+.free-open-simple .text-content p {
+  font-family: "Overpass", sans-serif;
+  font-weight: 300;
+  color: hsl(207, 13%, 34%);
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+@media (min-width: 1600px) {
+  .free-open-simple {
+    padding: 100px 0;
+    margin-top: 200px;
+  }
+  .free-open-simple .container {
+    display: flex;
+    align-items: center;
+  }
+  .free-open-simple img {
+    flex: 0 0 auto;
+    max-width: 80rem;
+    height: auto;
+    margin-left: -40rem;
+  }
+  .free-open-simple .text-content {
+    flex: 1;
+    text-align: left;
+    padding-left: 50px;
+  }
+  .free-open-simple .text-content h2, .free-open-simple .text-content .h2 {
+    font-size: 2.5rem;
+  }
+  .free-open-simple .text-content p {
+    margin-bottom: 40px;
+  }
+}
+.footer {
+  background-color: hsl(208, 49%, 24%);
+  color: #dee2e6;
+  padding: 60px 20px;
+  text-align: center;
+}
+.footer .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer .container .logo {
+  font-family: "Overpass", sans-serif;
+  font-weight: 600;
+  color: hsl(0, 100%, 100%);
+  font-size: 1.8rem;
+  margin-bottom: 40px;
+}
+.footer .container .footer-links {
+  margin-bottom: 40px;
+}
+.footer .container .footer-links h3, .footer .container .footer-links .h3 {
+  font-family: "Overpass", sans-serif;
+  font-weight: 600;
+  color: hsl(0, 100%, 100%);
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+.footer .container .footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer .container .footer-links ul li {
+  margin-bottom: 10px;
+}
+.footer .container .footer-links ul li a {
+  color: #dee2e6;
+  text-decoration: none;
+}
+.footer .container .footer-links ul li a:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 1600px) {
+  .footer {
+    padding: 80px 0;
+  }
+  .footer .container {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    text-align: left;
+  }
+  .footer .logo {
+    margin-bottom: 0;
+    margin-right: 80px;
+  }
+  .footer .footer-links {
+    margin-bottom: 0;
+    margin-right: 40px;
+  }
+  .footer .footer-links:last-child {
+    margin-right: 0;
+  }
+  .footer .footer-links h3, .footer .footer-links .h3 {
+    margin-bottom: 25px;
+  }
+  .footer .footer-links ul li {
+    margin-bottom: 15px;
   }
 }
 body {

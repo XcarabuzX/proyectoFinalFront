@@ -1,0 +1,68 @@
+// Importar variables
+@import 'variables';
+
+.free-open-simple {
+    background-color: $white; // Fondo blanco
+    padding: 80px 20px; // Padding superior e inferior y lateral para mobile
+    text-align: center; // Centrar texto e imagen en mobile
+
+    img {
+        display: block; // Asegurar comportamiento de bloque
+        width: 100%; // Ocupar el ancho disponible
+        max-width: 300px; // Limitar tamaño máximo
+        height: auto;
+        margin: 0 auto 60px auto; // Centrar y añadir espacio debajo
+    }
+
+    .text-content {
+        h2 {
+            font-family: $font-overpass;
+            font-weight: $font-weight-semibold;
+            color: $blue-900;
+            margin-bottom: 20px;
+            font-size: 2rem; // Tamaño de fuente para mobile
+        }
+
+        p {
+            font-family: $font-overpass;
+            font-weight: $font-weight-light;
+            color: $gray-600; // Color de texto
+            line-height: 1.8;
+            margin-bottom: 30px; // Espacio entre párrafos
+        }
+    }
+}
+
+@media (min-width: 1600px) {
+    .free-open-simple {
+        padding: 100px 0;
+        margin-top: 200px; // Ajustar según sea necesario para separarla de la sección anterior
+
+        .container {
+            display: flex; // Usar flexbox para la disposición horizontal
+            align-items: center; // Alinear verticalmente al centro
+            //gap: 80px; // Espacio entre la imagen y el texto
+        }
+
+        img {
+            flex: 0 0 auto;
+            max-width: 80rem; // Ajustar ancho de la imagen
+            height: auto;
+            margin-left: -40rem; // Mover la imagen hacia la izquierda para el efecto de recorte
+        }
+
+        .text-content {
+            flex: 1;
+            text-align: left;
+            padding-left: 50px; // Añadir padding a la izquierda para dar espacio a la imagen recortada
+
+            h2 {
+                 font-size: 2.5rem; // Tamaño de fuente más grande para desktop
+            }
+
+            p {
+                margin-bottom: 40px; // Espacio entre párrafos
+            }
+        }
+    }
+} 

@@ -138,10 +138,10 @@
 @media (min-width: 1600px) {
      .illustration-phones {
         position: absolute; // Usar absolute para posicionar precisamente respecto al body/viewport
-        top: 106rem; // Ajustar verticalmente (puede requerir ajustes)
+        top: 85rem; // Ajustar verticalmente (puede requerir ajustes)
         left: 25rem; // Ajustar horizontalmente para sobresalir por la izquierda
         //transform: translateY(-50%); // Centrar verticalmente basado en su propia altura
-        width: 40rem; // Ancho fijo para la imagen
+        width: 42rem; // Ancho fijo para la imagen
         z-index: 3; // Asegurar que esté por encima de la sección
     }
 
@@ -149,7 +149,7 @@
         height: 30rem;
         padding: 150px 160px 150px 160px; // Ajustar padding para pantallas grandes
         //height: auto; // Asegurar altura automática
-        bottom: -28rem; // Eliminar bottom
+        bottom: -8rem; // Eliminar bottom
         overflow: hidden; // Mantener para recortar los círculos
 
         .container {
