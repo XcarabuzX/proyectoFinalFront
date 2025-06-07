@@ -33,10 +33,43 @@
     }
 }
 
+@media (min-width: 992px) {
+    .free-open-simple {
+        padding: 100px 0;
+
+        .container {
+            display: flex; // Usar flexbox para la disposición horizontal
+            align-items: center; // Alinear verticalmente al centro
+            //gap: 80px; // Espacio entre la imagen y el texto
+        }
+
+        img {
+            flex: 0 0 auto;
+            max-width: 71rem;
+            height: auto;
+            margin-left: -23rem;
+        }
+
+        .text-content {
+            flex: 1;
+            text-align: left;
+            padding-left: 50px; // Añadir padding a la izquierda para dar espacio a la imagen recortada
+
+            h2 {
+                 font-size: 2.5rem; // Tamaño de fuente más grande para desktop
+            }
+
+            p {
+                margin-bottom: 40px; // Espacio entre párrafos
+            }
+        }
+    }
+}
+
 @media (min-width: 1600px) {
     .free-open-simple {
         padding: 100px 0;
-        margin-top: 200px; // Ajustar según sea necesario para separarla de la sección anterior
+        //margin-top: 200px; // Ajustar según sea necesario para separarla de la sección anterior
 
         .container {
             display: flex; // Usar flexbox para la disposición horizontal

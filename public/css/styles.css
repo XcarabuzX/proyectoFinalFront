@@ -12012,7 +12012,7 @@ textarea.form-control-lg {
   .header .navbar .navbar-nav {
     flex-direction: row;
     align-items: center;
-    margin-left: 30px;
+    margin-left: 0;
   }
   .header .navbar .navbar-nav .nav-item {
     margin-bottom: 0;
@@ -12029,13 +12029,14 @@ textarea.form-control-lg {
   }
   .header .navbar .navbar-nav .nav-item .nav-link.active {
     font-weight: 300;
+    text-decoration: underline;
   }
   .header .navbar .navbar-nav .nav-item .nav-link:hover {
     text-decoration: underline;
     opacity: 0.7;
   }
   .header .navbar .ms-auto.d-flex {
-    margin-left: 50px !important;
+    margin-left: auto;
     align-items: center;
   }
   .header .navbar .ms-auto.d-flex .nav-item {
@@ -12059,6 +12060,23 @@ textarea.form-control-lg {
     background-color: hsl(355, 100%, 84%);
     color: hsl(0, 100%, 100%);
     border-color: hsl(355, 100%, 84%);
+  }
+  .header .navbar .dropdown-menu {
+    background-color: hsl(0, 100%, 100%);
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    margin-top: 15px;
+  }
+  .header .navbar .dropdown-menu .dropdown-item {
+    color: hsl(208, 49%, 24%);
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    padding: 8px 20px;
+  }
+  .header .navbar .dropdown-menu .dropdown-item:hover {
+    background-color: #e9ecef;
+    color: hsl(208, 49%, 24%);
   }
   .header .header-content {
     text-align: left;
@@ -12110,18 +12128,9 @@ textarea.form-control-lg {
 }
 .designed-for-future img {
   display: block;
-  margin: 0 auto 40px auto;
-  max-width: 100%;
+  width: 20rem;
   height: auto;
-  position: static;
-  top: auto;
-  left: auto;
-  right: auto;
-  bottom: auto;
-  z-index: auto;
-  transform: none;
-  order: 0;
-  width: 100%;
+  margin: 0 auto 40px auto;
 }
 .designed-for-future .container-text {
   text-align: center;
@@ -12134,6 +12143,7 @@ textarea.form-control-lg {
   font-weight: 600;
   color: hsl(208, 49%, 24%);
   margin-bottom: 20px;
+  white-space: normal;
 }
 .designed-for-future .text-content p {
   font-family: "Overpass", sans-serif;
@@ -12143,43 +12153,40 @@ textarea.form-control-lg {
   margin-bottom: 30px;
 }
 
-@media (min-width: 1600px) {
+@media (min-width: 768px) {
+  .designed-for-future img {
+    width: 28rem;
+  }
+  .designed-for-future .container-text {
+    text-align: left;
+  }
+  .designed-for-future .text-content {
+    text-align: left;
+  }
+}
+@media (min-width: 992px) {
   .designed-for-future {
-    padding: 200px 0 100px 0;
+    padding: 100px 0 100px 0;
+  }
+  .designed-for-future .container {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    overflow-x: hidden;
   }
   .designed-for-future h2, .designed-for-future .h2 {
-    margin-bottom: 80px;
+    margin-bottom: 40px;
     font-size: 2.5rem;
     text-align: center;
   }
-  .designed-for-future .row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    flex-direction: row;
-  }
-  .designed-for-future img {
-    display: block;
-    width: 70rem;
+  .designed-for-future img.d-lg-block {
+    width: 145rem;
     height: auto;
-    position: absolute;
-    right: -19rem;
-    bottom: -16rem;
-    z-index: 1;
-    margin: 0;
-    max-width: none;
-    transform: none;
+    margin-right: -21rem;
     order: 2;
   }
   .designed-for-future .container-text {
-    width: 50%;
+    width: 100%;
     max-width: none;
-    padding: 0 0 0 160px;
+    padding: 0 160px 0 0;
     text-align: left;
     order: 1;
   }
@@ -12189,7 +12196,45 @@ textarea.form-control-lg {
   }
   .designed-for-future .text-content h3, .designed-for-future .text-content .h3 {
     font-size: 1.8rem;
-    white-space: nowrap;
+    white-space: normal;
+  }
+  .designed-for-future .text-content p {
+    margin-bottom: 40px;
+  }
+}
+@media (min-width: 1600px) {
+  .designed-for-future {
+    padding: 100px 0 100px 0;
+  }
+  .designed-for-future .container {
+    display: flex;
+    align-items: center;
+  }
+  .designed-for-future h2, .designed-for-future .h2 {
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    text-align: center;
+  }
+  .designed-for-future img.d-lg-block {
+    width: 145rem;
+    height: auto;
+    margin-right: -39rem;
+    order: 2;
+  }
+  .designed-for-future .container-text {
+    width: 100%;
+    max-width: none;
+    padding: 0 160px 0 0;
+    text-align: left;
+    order: 1;
+  }
+  .designed-for-future .text-content {
+    text-align: left;
+    padding: 0;
+  }
+  .designed-for-future .text-content h3, .designed-for-future .text-content .h3 {
+    font-size: 1.8rem;
+    white-space: normal;
   }
   .designed-for-future .text-content p {
     margin-bottom: 40px;
@@ -12251,63 +12296,66 @@ textarea.form-control-lg {
   font-weight: 300;
   color: #ced4da;
   line-height: 1.8;
-  max-width: 18rem;
   text-align: center;
   margin-bottom: 30px;
 }
 
 @media (min-width: 768px) {
   .illustration-phones {
-    top: -100px;
+    width: 18rem;
+  }
+  .state-of-art .text-content p {
+    text-align: left;
   }
 }
 @media (min-width: 992px) {
   .illustration-phones {
-    position: relative;
-    top: 0;
-    left: 80px;
-    width: auto;
-    margin-bottom: 0;
+    position: absolute;
+    top: 102rem;
+    left: 25rem;
+    width: 38rem;
+    z-index: 3;
   }
   .state-of-art {
-    padding: 100px 80px;
-    border-top-right-radius: 150px;
-    border-bottom-left-radius: 150px;
+    height: 30rem;
+    padding: 147px 10px 150px 180px;
+    margin-top: 6rem;
+    overflow: hidden;
   }
   .state-of-art .container {
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
   }
   .state-of-art .background-circles {
-    width: 900px;
-    top: -50px;
-    left: -200px;
-    transform: none;
-  }
-  .state-of-art .illustration-phones {
     position: absolute;
-    top: -100px;
-    left: 80px;
-    width: auto;
-    z-index: 5;
+    width: 66rem;
+    top: -30rem;
+    left: -13.5rem;
+    transform: none;
+    z-index: 1;
   }
   .state-of-art .text-content {
+    width: 100%;
+    top: -2rem;
+    padding-left: 0;
+    margin-left: 30rem;
     text-align: left;
-    width: 50%;
-    padding-left: 50px;
+    z-index: 2;
   }
   .state-of-art .text-content h2, .state-of-art .text-content .h2 {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
   .state-of-art .text-content p {
-    margin-bottom: 0;
+    max-width: 48rem;
+    font-size: 1.5rem;
+    text-align: justify;
   }
 }
 @media (min-width: 1600px) {
   .illustration-phones {
     position: absolute;
-    top: 85rem;
+    top: 113rem;
     left: 25rem;
     width: 42rem;
     z-index: 3;
@@ -12315,7 +12363,7 @@ textarea.form-control-lg {
   .state-of-art {
     height: 30rem;
     padding: 150px 160px 150px 160px;
-    bottom: -8rem;
+    margin-top: 6rem;
     overflow: hidden;
   }
   .state-of-art .container {
@@ -12375,10 +12423,35 @@ textarea.form-control-lg {
   margin-bottom: 30px;
 }
 
+@media (min-width: 992px) {
+  .free-open-simple {
+    padding: 100px 0;
+  }
+  .free-open-simple .container {
+    display: flex;
+    align-items: center;
+  }
+  .free-open-simple img {
+    flex: 0 0 auto;
+    max-width: 71rem;
+    height: auto;
+    margin-left: -23rem;
+  }
+  .free-open-simple .text-content {
+    flex: 1;
+    text-align: left;
+    padding-left: 50px;
+  }
+  .free-open-simple .text-content h2, .free-open-simple .text-content .h2 {
+    font-size: 2.5rem;
+  }
+  .free-open-simple .text-content p {
+    margin-bottom: 40px;
+  }
+}
 @media (min-width: 1600px) {
   .free-open-simple {
     padding: 100px 0;
-    margin-top: 200px;
   }
   .free-open-simple .container {
     display: flex;
@@ -12403,7 +12476,7 @@ textarea.form-control-lg {
   }
 }
 .footer {
-  background-color: hsl(208, 49%, 24%);
+  background-color: hsl(240, 10%, 16%);
   border-top-right-radius: 80px;
   color: #dee2e6;
   padding: 60px 20px;
@@ -12447,6 +12520,34 @@ textarea.form-control-lg {
   text-decoration: underline;
 }
 
+@media (min-width: 992px) {
+  .footer {
+    padding: 80px 0;
+  }
+  .footer .container {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    text-align: left;
+  }
+  .footer .logo {
+    margin-bottom: 0;
+    margin-right: 80px;
+  }
+  .footer .footer-links {
+    margin-bottom: 0;
+    margin-right: 40px;
+  }
+  .footer .footer-links:last-child {
+    margin-right: 0;
+  }
+  .footer .footer-links h3, .footer .footer-links .h3 {
+    margin-bottom: 25px;
+  }
+  .footer .footer-links ul li {
+    margin-bottom: 15px;
+  }
+}
 @media (min-width: 1600px) {
   .footer {
     padding: 80px 0;

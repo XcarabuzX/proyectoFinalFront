@@ -176,122 +176,139 @@
    .header {
        background-size: 160% auto, 100% 100%;
        background-position: -150px -920px, center top;
-       text-align: left; // Alinear texto a la izquierda en desktop
-       //background-size: 100% 100%; // Ajustar tamaño del fondo si es necesario para desktop
-       //background-position: center; // Ajustar posición del fondo si es necesario para desktop
+       text-align: left;
 
        .navbar {
-           padding: 20px 80px; // Ajustar padding de la barra de navegación
+           padding: 20px 80px;
 
            .navbar-collapse {
-                display: none !important; // Ocultar el menú colapsado en desktop
+                display: none !important;
            }
 
            .navbar-brand {
-               font-size: 2rem; // Ajustar tamaño del logo para desktop
+               font-size: 2rem;
            }
 
-           // Estilos para los enlaces de navegación en desktop
            .navbar-nav {
-               flex-direction: row; // Disposición horizontal
-               align-items: center; // Alinear verticalmente
-               margin-left: 30px; // Espacio entre logo y enlaces
+               flex-direction: row;
+               align-items: center;
+               margin-left: 0;
 
                .nav-item {
-                   margin-bottom: 0; // Eliminar margen inferior de móvil
-                   margin-right: 20px; // Espacio entre enlaces
+                   margin-bottom: 0;
+                   margin-right: 20px;
 
                    &:last-child {
                        margin-right: 0;
                    }
 
                    .nav-link {
-                       color: $white; // Color de texto blanco
-                       font-weight: $font-weight-light; // Peso de fuente ligero
-                       text-align: left; // Alinear texto a la izquierda
-                       padding: 5px 0; // Ajustar padding
+                       color: $white;
+                       font-weight: $font-weight-light;
+                       text-align: left;
+                       padding: 5px 0;
 
                        &.active {
-                           font-weight: $font-weight-light; // Mantener peso ligero para activo
+                           font-weight: $font-weight-light;
+                           text-decoration: underline;
                        }
 
                         &:hover {
-                           text-decoration: underline; // Subrayado en hover
-                           opacity: 0.7; // Ligera opacidad en hover
+                           text-decoration: underline;
+                           opacity: 0.7;
                         }
                    }
                }
            }
 
-           // Estilos para los botones de autenticación en desktop
            .ms-auto.d-flex {
-                margin-left: 50px !important; // Ajustar margen a la izquierda
-                align-items: center; // Alinear verticalmente
+                margin-left: auto;
+                align-items: center;
 
                .nav-item {
-                   margin-bottom: 0; // Eliminar margen inferior de móvil
-                   margin-right: 20px; // Espacio entre Login y Sign Up
+                   margin-bottom: 0;
+                   margin-right: 20px;
 
                    .nav-link {
-                       color: $white; // Color de texto blanco para Login
+                       color: $white;
                         &:hover {
-                           opacity: 0.7; // Ligera opacidad en hover
+                           opacity: 0.7;
                         }
                    }
 
                    .btn-primary {
-                        width: auto; // Permitir que el botón tenga ancho automático
-                        padding: 10px 30px; // Ajustar padding del botón Sign Up
-                        background: $white; // Fondo blanco
-                        color: $red-500; // Texto rojo
-                        border-color: $white; // Borde blanco
+                        width: auto;
+                        padding: 10px 30px;
+                        background: $white;
+                        color: $red-500;
+                        border-color: $white;
 
                          &:hover {
-                             background-color: lighten($red-400, 10%); // Cambiar fondo en hover
-                             color: $white; // Texto blanco en hover
-                             border-color: lighten($red-400, 10%); // Cambiar borde en hover
+                             background-color: lighten($red-400, 10%);
+                             color: $white;
+                             border-color: lighten($red-400, 10%);
                          }
                    }
                }
            }
+
+           .dropdown-menu {
+                background-color: $white;
+                border-radius: 5px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+                padding: 10px 0;
+                margin-top: 15px;
+
+                .dropdown-item {
+                    color: $blue-900;
+                    font-family: $font-ubuntu;
+                    font-weight: $font-weight-medium;
+                    padding: 8px 20px;
+
+                    &:hover {
+                        background-color: $gray-200;
+                        color: $blue-900;
+                    }
+                }
+           }
        }
 
        .header-content {
-            text-align: left; // Alinear contenido a la izquierda
-            padding: 60px 80px; // Ajustar padding
-            margin-top: 0; // Eliminar margen superior de móvil
+            text-align: left;
+            padding: 60px 80px;
+            margin-top: 0;
 
            h1 {
-                font-size: 3.5rem; // Ajustar tamaño de fuente del título
-                margin-bottom: 20px; // Aumentar margen inferior
+                font-size: 3.5rem;
+                margin-bottom: 20px;
            }
 
            p {
-                font-size: 1.2rem; // Ajustar tamaño de fuente del subtítulo
-                margin-bottom: 50px; // Aumentar margen inferior
+                font-size: 1.2rem;
+                margin-bottom: 50px;
            }
 
            .header-buttons {
-                flex-direction: row; // Disposición horizontal para botones
-                max-width: 350px; // Eliminar límite de ancho
-                padding-top: 0; // Eliminar padding superior
+                flex-direction: row;
+                max-width: 350px;
+                padding-top: 0;
 
                .btn {
-                   width: auto; // Ancho automático para botones
+                   width: auto;
                }
 
                 .btn-light {
                     &:hover {
-                         background-color: lighten($red-400, 10%); // Cambiar fondo en hover
-                         color: $white; // Texto blanco en hover
+                         background-color: lighten($red-400, 10%);
+                         color: $white;
                     }
                 }
 
                 .btn-outline-light {
                      &:hover {
-                         background-color: $white; // Fondo blanco en hover
-                         color: $red-500; // Texto rojo en hover
-                         border-color: $white; // Borde blanco en hover
+                         background-color: $white;
+                         color: $red-500;
+                         border-color: $white;
                      }
                 }
            }

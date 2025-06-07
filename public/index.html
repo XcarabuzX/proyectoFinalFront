@@ -16,14 +16,34 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav d-lg-none">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Product</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownProductMobile" role="button" data-bs-toggle="dropdown" aria-expanded="false">Product</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownProductMobile">
+                                <li><a class="dropdown-item" href="#">Overview</a></li>
+                                <li><a class="dropdown-item" href="#">Pricing</a></li>
+                                <li><a class="dropdown-item" href="#">Marketplace</a></li>
+                                <li><a class="dropdown-item" href="#">Features</a></li>
+                                <li><a class="dropdown-item" href="#">Integrations</a></li>
+                            </ul>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Company</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownCompanyMobile" role="button" data-bs-toggle="dropdown" aria-expanded="false">Company</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownCompanyMobile">
+                                <li><a class="dropdown-item" href="#">About</a></li>
+                                <li><a class="dropdown-item" href="#">Team</a></li>
+                                <li><a class="dropdown-item" href="#">Blog</a></li>
+                                <li><a class="dropdown-item" href="#">Careers</a></li>
+                            </ul>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Connect</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownConnectMobile" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Connect
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownConnectMobile">
+                                <li><a class="dropdown-item" href="#">Contact</a></li>
+                                <li><a class="dropdown-item" href="#">Newsletter</a></li>
+                                <li><a class="dropdown-item" href="#">LinkedIn</a></li>
+                            </ul>
                         </li>
                     </ul>
                     <div class="navbar-nav ms-auto d-lg-none">
@@ -35,19 +55,39 @@
                         </li>
                     </div>
                 </div>
-                <div class="d-none d-lg-flex align-items-center ms-auto">
+                <div class="d-none d-lg-flex align-items-center flex-grow-1">
                     <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Product</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownProduct" role="button" data-bs-toggle="dropdown" aria-expanded="false">Product</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownProduct">
+                                <li><a class="dropdown-item" href="#">Overview</a></li>
+                                <li><a class="dropdown-item" href="#">Pricing</a></li>
+                                <li><a class="dropdown-item" href="#">Marketplace</a></li>
+                                <li><a class="dropdown-item" href="#">Features</a></li>
+                                <li><a class="dropdown-item" href="#">Integrations</a></li>
+                            </ul>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Company</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownCompany" role="button" data-bs-toggle="dropdown" aria-expanded="false">Company</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownCompany">
+                                <li><a class="dropdown-item" href="#">About</a></li>
+                                <li><a class="dropdown-item" href="#">Team</a></li>
+                                <li><a class="dropdown-item" href="#">Blog</a></li>
+                                <li><a class="dropdown-item" href="#">Careers</a></li>
+                            </ul>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Connect</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" aria-current="page" href="#" id="navbarDropdownConnect" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+                                Connect
+                            </a>
+                            <ul class="dropdown-menu show" aria-labelledby="navbarDropdownConnect">
+                                <li><a class="dropdown-item" href="#">Contact</a></li>
+                                <li><a class="dropdown-item" href="#">Newsletter</a></li>
+                                <li><a class="dropdown-item" href="#">LinkedIn</a></li>
+                            </ul>
                         </li>
                     </ul>
-                    <div class="d-flex">
+                    <div class="d-flex ms-auto">
                         <a class="nav-link" href="#">Login</a>
                         <a class="btn btn-primary ms-3" href="#">Sign Up</a>
                     </div>
@@ -67,15 +107,14 @@
     </header>
 
     <section class="designed-for-future">
-        <div class="container">
             <h2 class="text-center">Designed for the future</h2>
-            <div class="row align-items-center">
-                <!-- Image will go here -->
-                <img src="images/illustration-editor-desktop.svg" alt="Illustration of a laptop" class="img-fluid">
+            <div class="container">
+                <img src="images/illustration-editor-mobile.svg" alt="Illustration of a laptop" class="d-lg-none">
+                <img src="images/illustration-editor-desktop.svg" alt="Illustration of a laptop" class="d-none d-lg-block">
                 <div class="container-text">
                     <div class="text-content">
-                        <h3 class="d-none d-lg-block">Introducing an extensible editor</h3>
-                        <h3 class="d-lg-none">Introducing an<br>extensible editor</h3>
+                        <h3 class="d-none d-md-block d-lg-block ">Introducing an extensible editor</h3>
+                        <h3 class="d-md-none">Introducing an<br>extensible editor</h3>
                         <p>
                             Blogr features an exceedingly intuitive interface which lets you focus on one
                             thing: creating content. The editor supports management of multiple blogs
@@ -91,7 +130,6 @@
                         </p>
                     </div>
                 </div>
-            </div>
         </div>
     </section>
 

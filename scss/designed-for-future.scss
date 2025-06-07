@@ -22,18 +22,9 @@
 
     img {
         display: block;
-        margin: 0 auto 40px auto;
-        max-width: 100%;
+        width: 20rem;
         height: auto;
-        position: static;
-        top: auto;
-        left: auto;
-        right: auto;
-        bottom: auto;
-        z-index: auto;
-        transform: none;
-        order: 0;
-        width: 100%;
+        margin: 0 auto 40px auto;
     }
 
     .container-text {
@@ -48,6 +39,7 @@
             font-weight: $font-weight-semibold;
             color: $blue-900;
             margin-bottom: 20px;
+            white-space: normal;
         }
 
         p {
@@ -60,47 +52,51 @@
     }
 }
 
-// Estilos para Desktop (a partir de 1600px)
-@media (min-width: 1600px) {
+// Estilos para Tablet (a partir de 768px)
+@media (min-width: 768px) {
     .designed-for-future {
-        padding: 200px 0 100px 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        overflow-x: hidden;
+        img {
+            width: 28rem;
+        }
+    }
+
+    .designed-for-future {
+        .container-text {
+            text-align: left;
+        }
+
+        .text-content {
+            text-align: left;
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .designed-for-future {
+        padding: 100px 0 100px 0;
+
+        .container {
+            display: flex;
+            align-items: center;
+        }
 
         h2 {
-            margin-bottom: 80px;
+            margin-bottom: 40px;
             font-size: 2.5rem;
             text-align: center;
         }
 
-        .row {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            width: 100%;
-            flex-direction: row;
-        }
-
-        img {
-            display: block;
-            width: 70rem;
+        img.d-lg-block {
+            width: 145rem;
             height: auto;
-            position: absolute;
-            right: -19rem;
-            bottom: -16rem;
-            z-index: 1;
-            margin: 0;
-            max-width: none;
-            transform: none;
+            margin-right: -21rem;
             order: 2;
         }
 
         .container-text {
-            width: 50%;
+            width: 100%;
             max-width: none;
-            padding: 0 0 0 160px;
+            padding: 0 160px 0 0;
             text-align: left;
             order: 1;
         }
@@ -111,7 +107,54 @@
 
             h3 {
                 font-size: 1.8rem;
-                white-space: nowrap;
+                white-space: normal;
+            }
+
+            p {
+                margin-bottom: 40px;
+            }
+        }
+    }
+}
+
+// Estilos para Desktop (a partir de 1600px)
+@media (min-width: 1600px) {
+    .designed-for-future {
+        padding: 100px 0 100px 0;
+
+        .container {
+            display: flex;
+            align-items: center;
+        }
+
+        h2 {
+            margin-bottom: 40px;
+            font-size: 2.5rem;
+            text-align: center;
+        }
+
+        img.d-lg-block {
+            width: 145rem;
+            height: auto;
+            margin-right: -39rem;
+            order: 2;
+        }
+
+        .container-text {
+            width: 100%;
+            max-width: none;
+            padding: 0 160px 0 0;
+            text-align: left;
+            order: 1;
+        }
+
+        .text-content {
+            text-align: left;
+            padding: 0;
+
+            h3 {
+                font-size: 1.8rem;
+                white-space: normal;
             }
 
             p {

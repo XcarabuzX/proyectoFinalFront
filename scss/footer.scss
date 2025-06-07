@@ -2,7 +2,7 @@
 @import 'variables';
 
 .footer {
-    background-color: $blue-900; // Usar el color de fondo oscuro
+    background-color: $gray-900; // Usar el color de fondo oscuro
     border-top-right-radius: 80px;
     color: $gray-300; // Color de texto para enlaces y párrafos
     padding: 60px 20px; // Padding para mobile
@@ -48,6 +48,43 @@
                             text-decoration: underline;
                         }
                     }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .footer {
+        padding: 80px 0;
+
+        .container {
+            flex-direction: row; // Disposición horizontal en desktop
+            justify-content: space-around; // Distribuir espacio entre elementos
+            align-items: flex-start; // Alinear elementos a la parte superior
+            text-align: left; // Alinear texto a la izquierda en desktop
+        }
+
+        .logo {
+            margin-bottom: 0; // Eliminar margen inferior en desktop
+            margin-right: 80px; // Espacio a la derecha del logo (ajustar si es necesario)
+        }
+
+        .footer-links {
+            margin-bottom: 0; // Eliminar margen inferior en desktop
+            margin-right: 40px; // Espacio entre columnas de enlaces (ajustar si es necesario)
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            h3 {
+                margin-bottom: 25px; // Espacio debajo del título
+            }
+
+            ul {
+                li {
+                    margin-bottom: 15px; // Espacio entre elementos de la lista
                 }
             }
         }
