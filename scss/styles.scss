@@ -1,0 +1,30 @@
+@import 'variables';
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap');
+
+@import 'header';
+@import 'designed-for-future';
+@import 'state-of-art';
+@import 'free-open-simple';
+@import 'footer';
+
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+
+body {
+    font-family: $font-overpass;
+    font-size: $font-size-base;
+    color: $gray-600;
+}
+
+.font-ubuntu {
+    font-family: $font-ubuntu;
+}
+
+.fw-light { font-weight: $font-weight-light; }
+.fw-regular { font-weight: $font-weight-regular; }
+.fw-medium { font-weight: $font-weight-medium; }
+.fw-semibold { font-weight: $font-weight-semibold; }
+.fw-bold { font-weight: $font-weight-bold; }
